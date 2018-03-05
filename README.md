@@ -1,9 +1,8 @@
 # Netsec_ML
 
-Series of utilities and training models for network security. Built in Scala for Apache Spark MLLib
+Series of utilities and training models for network security. Built in Scala for Apache Spark MLLib for learning purposes
 
 
-util/log-gen.py will generate some csv logs to train on, however this data is randomized and won't yield any worthwhile results.
 
 ### IDS_LogReg
 #### Info
@@ -34,3 +33,8 @@ data.filter("hostname = 'abstract' AND hour = 12")
     .select(data("load")
     .as("label"),$"hour",$"memutil",$"netutil")
 ```
+
+### Utils
+#### Log Generation
+util/health-log-gen.py will generate some csv logs to train on, however this data is randomized and won't yield any worthwhile results.
+util/network-log-gen.py will generate some JSON logs to train on.
