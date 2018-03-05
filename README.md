@@ -1,11 +1,22 @@
-# Server Health ML
+# Netsec_ML
 
-Demo/Proof of concept for predicting server load using Apache Spark ML and Scala. 
+Series of utilities and training models for network security. Built in Scala for Apache Spark MLLib
+
 
 util/log-gen.py will generate some csv logs to train on, however this data is randomized and won't yield any worthwhile results.
 
+### IDS_LogReg
+#### Info
+Logistic Regression prediction model for IDS Logs.
 
-## Usage
+#### Usage
+This was trained with an updated version of the KDD dataset that everyone uses.
+
+
+### Server_Health
+#### Info
+Linear Regression prediction model for server health data.
+#### Usage
 
 This is a demo, but if given real data it yields a model that can be worked with. Currently the label is based upon the cpu load average, but this can be modified to other things, as shown below.
 
