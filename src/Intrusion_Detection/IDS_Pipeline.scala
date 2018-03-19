@@ -12,7 +12,7 @@ import org.apache.log4j._
 Logger.getLogger("org").setLevel(Level.ERROR)
 
 val spark = SparkSession.builder().getOrCreate()
-val data = spark.read.option("header","true").option("inferSchema","true").format("csv").load("data_full.csv")
+val data = spark.read.option("header","true").option("inferSchema","true").format("csv").load("data_canadAI.csv")
 
 /// Set up Columns and tweak data
 val colnames = (Array(
@@ -53,7 +53,7 @@ var pipeline = new Pipeline().setStages(Array(
 
 // Fit
 val model = pipeline.fit(training)
-model.write.overwrite.save("../../models/IDS")
+model.write.overwrite.save("../../models/canadAI")
 // Get Results on Test Set
 val results = model.transform(test)
 

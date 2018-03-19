@@ -1,1 +1,9 @@
 metastore_db/
+.DS_Store
+NSL_KDD/
+*.log
+*.csv
+*test*
+*out*
+*.h5
+anomalous_lib/
